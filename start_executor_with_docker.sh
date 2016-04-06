@@ -1,3 +1,3 @@
 #!/bin/bash
 source /usr/local/rvm/scripts/rvm
-hyperflow-amqp-executor /etc/hyperflow-amqp-executor.yml
+env AMQP_URL=$(cat /hyperflow-deployment/AMQP_URL) hyperflow-amqp-executor /etc/hyperflow-amqp-executor.yml
