@@ -9,7 +9,7 @@ md_tarball = "MD_v4_OMP.tar.gz"
 md_dir="/MD_v4_OMP"
 scripts_dir="/MolecularDynamicsParameterStudy"
 
-remote_file "/md/#{md_tarball}" do
+remote_file "/#{md_tarball}" do
  source "https://dl.dropboxusercontent.com/s/alho0mwrg4dg45b/#{md_tarball}"
  action :create_if_missing 
 end
