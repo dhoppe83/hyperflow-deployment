@@ -1,3 +1,3 @@
 #!/bin/bash
-service hyperflow-amqp-executor start
-exec sleep infinity
+source /usr/local/rvm/scripts/rvm
+hyperflow-amqp-executor /etc/hyperflow-amqp-executor.yml
