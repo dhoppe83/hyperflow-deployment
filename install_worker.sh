@@ -5,6 +5,5 @@ source /usr/local/rvm/scripts/rvm
 
 echo "Check if env variable exists: " $PUBLIC_RabbitMQ_Required_by_Worker
 sed -i -e "s|amqp://localhost|amqp://$PUBLIC_RabbitMQ_Required_by_Worker|" attributes/hyperflow-md-worker.json
-echo `pwd`
-echo $( ls )
+echo amqp://$PUBLIC_RabbitMQ_Required_by_Worker >> AMQP_URL
 bash install.sh attributes/hyperflow-md-worker.json
