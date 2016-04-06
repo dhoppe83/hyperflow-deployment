@@ -4,7 +4,7 @@ curl -sSL https://get.rvm.io | bash -s stable --ruby=2.3.0
 source /usr/local/rvm/scripts/rvm
 
 echo "Check if env variable exists: " $PUBLIC_RabbitMQ_Required_by_Worker
-echo `pwd`
-cd hyperflow-deployment/
 sed -i -e "s|amqp://localhost|amqp://$PUBLIC_RabbitMQ_Required_by_Worker|" attributes/hyperflow-md-worker.json
-install.sh attributes/hyperflow-md-worker.json
+echo `pwd`
+echo $( ls )
+bash install.sh attributes/hyperflow-md-worker.json
