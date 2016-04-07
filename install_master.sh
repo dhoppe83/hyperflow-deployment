@@ -1,4 +1,6 @@
 #!/bin/bash
+bash install.sh attributes/hyperflow.json
+
 curl -o /hyperflow-deployment/md_amqp.json https://raw.githubusercontent.com/dice-cyfronet/hyperflow/develop/examples/MolecularDynamicsParameterStudy/md_amqp.json
 
 echo amqp://$PUBLIC_RabbitMQ_Required_by_Master > AMQP_URL
