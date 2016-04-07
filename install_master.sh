@@ -4,6 +4,4 @@ bash install.sh attributes/hyperflow.json
 curl -o /hyperflow-deployment/md_amqp.json https://raw.githubusercontent.com/dhoppe83/hyperflow-deployment/master/md_amqp.json
 
 echo amqp://$PUBLIC_RabbitMQ_Required_by_Master > AMQP_URL
-REDIS_URL=$PUBLIC_Redis_Required_by_Master
-URL_ARRAY=(${REDIS_URL//:/ })
-echo "${URL_ARRAY[1]}" > REDIS_IP
+echo redis://$PUBLIC_Redis_Required_by_Master > REDIS_URL
